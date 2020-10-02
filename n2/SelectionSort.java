@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class selectionSort{
+public class SelectionSort{
     
     public static void main(String[] args){
         int[] vetor = gerarVetor(5);
