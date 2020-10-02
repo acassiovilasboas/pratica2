@@ -1,10 +1,23 @@
-import javax.swing.JOptionPane;
 import java.util.Random;
 
 public class selectionSort{
     
     public static void main(String[] args){
-        int[] vetor = gerarVetor(10);
+        int[] vetor = gerarVetor(5);
+
+        imprimeVetor(vetor);
+
+        for (int i = 0; i < vetor.length; i++){
+            int menor = i;
+            
+            for (int j = i + 1; j < vetor.length; j++)
+                if(vetor[j] < vetor[menor])
+                    menor = j;
+
+            int aux = vetor[i];
+            vetor[i] = vetor[menor];
+            vetor[menor] = aux;
+        }
 
         imprimeVetor(vetor);
 
@@ -20,10 +33,9 @@ public class selectionSort{
     }
 
     public static void imprimeVetor(int[] v){
-        for(int i : v){
+        for(int i : v)
             System.out.printf(" %d ", i);
-        }
-        
+        System.out.println(); 
     }
 
     
