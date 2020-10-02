@@ -3,13 +3,14 @@ import java.util.Random;
 public class RanckingAlgoritmo {
 
     public static void main(String[] args) {
-        int[] vetor = gerarVetor(100);
+        int[] vetor = gerarVetor(10000);
         String str = "";
 
         str += "\nBolha: " + bubble(vetor);
         str += "\nInsert: " + insert(vetor);
         str += "\nSelect: " + selection(vetor);
 
+        out(str);
     }
 
     public static long bubble(int[] vetor) {
@@ -66,7 +67,11 @@ public class RanckingAlgoritmo {
         int[] v = new int[n];
         Random rand = new Random();
         for (int i = 0; i < v.length; i++)
-            v[i] = rand.nextInt(99) + 1;
+            v[i] = rand.nextInt(100000) + 1;
         return v;
+    }
+
+    public static void out(String str) {
+        System.out.println(str);
     }
 }
