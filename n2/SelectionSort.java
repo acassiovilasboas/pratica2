@@ -4,9 +4,7 @@ public class SelectionSort{
     
     public static void main(String[] args){
         int[] vetor = gerarVetor(5);
-
         imprimeVetor(vetor);
-
         for (int i = 0; i < vetor.length; i++){
             int menor = i;
             
@@ -18,9 +16,7 @@ public class SelectionSort{
             vetor[i] = vetor[menor];
             vetor[menor] = aux;
         }
-
         imprimeVetor(vetor);
-
         System.out.println();
     }
 
@@ -37,6 +33,4 @@ public class SelectionSort{
             System.out.printf(" %d ", i);
         System.out.println(); 
     }
-
-    
 }

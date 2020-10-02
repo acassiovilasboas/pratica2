@@ -20,7 +20,6 @@ public class InsertionSort {
 
         }
         imprimeVetor(vetor);
-
     }
 
     public static int[] gerarVetor(int n) {
